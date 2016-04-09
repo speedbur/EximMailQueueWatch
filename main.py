@@ -15,7 +15,7 @@ def check_mail_queue_size(command_line_result):
         count = int(line)
         if count >= settings.EXIM_WARN_QUEUE_SIZE:
             raise Exception("mail queue size is " + str(count) + " and exceeds maximum value of " + str(
-                settings.EXIM_MAILQUEUE_SIZE_PARAM))
+                settings.EXIM_WARN_QUEUE_SIZE))
         break
 
 
